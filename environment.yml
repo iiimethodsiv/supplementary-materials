@@ -1,0 +1,13 @@
+name: iiimethodsiv
+channels:
+  - default
+dependencies:
+  - python=3.8
+  - sphinx
+  - pip
+  - pandas
+  - matplotlib
+  - numpy
+  - pip:
+    - quantecon
+    - jupyter-book
