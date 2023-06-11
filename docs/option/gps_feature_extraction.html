@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -49,6 +50,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -70,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/option/gps_feature_extraction';</script>
-    <link rel="canonical" href="https://github.com/iiimethodsiv/intro2quandataanalysis/docs/option/gps_feature_extraction.html" />
+    <link rel="canonical" href="https://github.com/iiimethodsiv/supplementary-materials/docs/option/gps_feature_extraction.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -295,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/iiimethodsiv/intro2quandataanalysis/blob/gh-pages/docs/option/gps_feature_extraction.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/iiimethodsiv/supplementary-materials/blob/gh-pages/docs/option/gps_feature_extraction.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +328,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/iiimethodsiv/intro2quandataanalysis" target="_blank"
+      <li><a href="https://github.com/iiimethodsiv/supplementary-materials" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +345,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/iiimethodsiv/intro2quandataanalysis/issues/new?title=Issue%20on%20page%20%2Fdocs/option/gps_feature_extraction.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/iiimethodsiv/supplementary-materials/issues/new?title=Issue%20on%20page%20%2Fdocs/option/gps_feature_extraction.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -515,88 +517,70 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># load the GPS data which we cleaned in 00_clean_GPS_data.ipynb</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;010&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">traj_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./traj_</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">_labeled.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># traj_df = pd.read_csv(f&#39;./traj_{user}_labeled.csv&#39;, index_col=0)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
-<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/io/parsers/readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/io/parsers/readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/io/parsers/readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File ~/anaconda3/envs/iiimethodsiv/lib/python3.8/site-packages/pandas/io/common.py:856,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">851</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">852</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./traj_010_labeled.csv&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/7ss5kcb12n1gtlpc8p2mtjtw0000gn/T/ipykernel_27912/953823710.py:3: DtypeWarning: Columns (10) have mixed types. Specify dtype option on import or set low_memory=False.
+  traj_df = pd.read_csv(f&#39;./traj_{user}_labeled.csv&#39;, index_col=0)
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>height</th>
+      <th>days_total</th>
+      <th>date</th>
+      <th>time</th>
+      <th>record_dt</th>
+      <th>user</th>
+      <th>trans_trip</th>
+      <th>trans_mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39.138159</td>
+      <td>117.217108</td>
+      <td>-36</td>
+      <td>39805.961748</td>
+      <td>2008-12-23</td>
+      <td>23:04:55</td>
+      <td>2008-12-23 23:04:55</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39.138196</td>
+      <td>117.217068</td>
+      <td>-72</td>
+      <td>39805.961759</td>
+      <td>2008-12-23</td>
+      <td>23:04:56</td>
+      <td>2008-12-23 23:04:56</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -608,18 +592,108 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># exclude the rows containing no information about transportation mode</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of observations: </span><span class="si">{:,}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">traj_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Size of observations: 534,140
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>height</th>
+      <th>days_total</th>
+      <th>date</th>
+      <th>time</th>
+      <th>record_dt</th>
+      <th>user</th>
+      <th>trans_trip</th>
+      <th>trans_mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39.845966</td>
+      <td>116.473938</td>
+      <td>131</td>
+      <td>39713.992662</td>
+      <td>2008-09-22</td>
+      <td>23:49:26</td>
+      <td>2008-09-22 23:49:26</td>
+      <td>10</td>
+      <td>163.0</td>
+      <td>train</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39.846383</td>
+      <td>116.473363</td>
+      <td>135</td>
+      <td>39713.992674</td>
+      <td>2008-09-22</td>
+      <td>23:49:27</td>
+      <td>2008-09-22 23:49:27</td>
+      <td>10</td>
+      <td>163.0</td>
+      <td>train</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>39.846803</td>
+      <td>116.472788</td>
+      <td>141</td>
+      <td>39713.992685</td>
+      <td>2008-09-22</td>
+      <td>23:49:28</td>
+      <td>2008-09-22 23:49:28</td>
+      <td>10</td>
+      <td>163.0</td>
+      <td>train</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>39.847218</td>
+      <td>116.472213</td>
+      <td>141</td>
+      <td>39713.992697</td>
+      <td>2008-09-22</td>
+      <td>23:49:29</td>
+      <td>2008-09-22 23:49:29</td>
+      <td>10</td>
+      <td>163.0</td>
+      <td>train</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>39.847631</td>
+      <td>116.471641</td>
+      <td>141</td>
+      <td>39713.992708</td>
+      <td>2008-09-22</td>
+      <td>23:49:30</td>
+      <td>2008-09-22 23:49:30</td>
+      <td>10</td>
+      <td>163.0</td>
+      <td>train</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="id2">
 <h2><span class="section-number">9.5.1. </span>一つ前の場所（ポイント）からの時間差を計算する<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
@@ -632,19 +706,6 @@ document.write(`
 <span class="c1"># create the start and end time for each trajectory</span>
 <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;time_delta&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">traj_df</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">-</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;time_delta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">seconds</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># convert time values to timestamp</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># sort values by trip id (trans_trip) and timestamp</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">,</span><span class="s1">&#39;timestamp&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -662,15 +723,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plot the histogram of the maximum time differences between points per trip</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">trip_dt</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt_seconds</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">trip_dt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
+<img alt="../../_images/7b9df9ed02e40b653b9639ef2d2562ccd0452488d1a58db49f73f1d11fe18f74.png" src="../../_images/7b9df9ed02e40b653b9639ef2d2562ccd0452488d1a58db49f73f1d11fe18f74.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0       1.0
+0.1       2.0
+0.2       2.0
+0.3       4.0
+0.4      48.0
+0.5      61.0
+0.6      82.0
+0.7     120.0
+0.8     317.0
+0.9    1076.0
+Name: dt_seconds, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -687,35 +751,104 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># summary info on time differences between points, grouped by trip id (trans_trip)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="p">(</span><span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">,</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="o">.</span><span class="n">time_delta</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">seconds</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;count&#39;</span><span class="p">]))</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean</th>
+      <th>median</th>
+      <th>max</th>
+      <th>min</th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>trans_mode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>airplane</th>
+      <td>3699.000000</td>
+      <td>3699.0</td>
+      <td>7394.0</td>
+      <td>4.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>bus</th>
+      <td>2597.941176</td>
+      <td>67.5</td>
+      <td>85896.0</td>
+      <td>2.0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>car</th>
+      <td>119.000000</td>
+      <td>119.0</td>
+      <td>119.0</td>
+      <td>119.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>subway</th>
+      <td>1916.595745</td>
+      <td>59.0</td>
+      <td>85903.0</td>
+      <td>2.0</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>taxi</th>
+      <td>7997.218750</td>
+      <td>68.5</td>
+      <td>85474.0</td>
+      <td>2.0</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>train</th>
+      <td>8911.393939</td>
+      <td>1061.0</td>
+      <td>84677.0</td>
+      <td>2.0</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>walk</th>
+      <td>602.006579</td>
+      <td>3.0</td>
+      <td>85263.0</td>
+      <td>1.0</td>
+      <td>152</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Since airplane and car trips are less, we remove these modes for further analysis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="o">~</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;airplane&#39;</span><span class="p">,</span><span class="s1">&#39;car&#39;</span><span class="p">])]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">traj_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="o">~</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;airplane&#39;</span><span class="p">,</span><span class="s1">&#39;car&#39;</span><span class="p">])]</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -727,17 +860,6 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># store previous points&#39; latitude and logitude by using `shift` function of pandas</span>
 <span class="n">traj_df</span><span class="p">[[</span><span class="s1">&#39;latitude_prev&#39;</span><span class="p">,</span><span class="s1">&#39;longitude_prev&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">)[[</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># store previous points&#39; latitude and logitude by using `shift` function of pandas</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[[</span><span class="s1">&#39;latitude_prev&#39;</span><span class="p">,</span><span class="s1">&#39;longitude_prev&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">)[[</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -762,17 +884,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># map the calculation function above to the dataframe</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">calc_distance</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;latitude_prev&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;longitude_prev&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -781,15 +892,84 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>height</th>
+      <th>days_total</th>
+      <th>date</th>
+      <th>time</th>
+      <th>record_dt</th>
+      <th>user</th>
+      <th>trans_trip</th>
+      <th>trans_mode</th>
+      <th>timestamp</th>
+      <th>time_delta</th>
+      <th>dt_seconds</th>
+      <th>latitude_prev</th>
+      <th>longitude_prev</th>
+      <th>distance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>39.894178</td>
+      <td>116.318200</td>
+      <td>-777</td>
+      <td>39535.621296</td>
+      <td>2008-03-28</td>
+      <td>14:54:40</td>
+      <td>2008-03-28 14:54:40</td>
+      <td>10</td>
+      <td>1.0</td>
+      <td>train</td>
+      <td>2023-06-11 14:54:40</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>39.894505</td>
+      <td>116.321132</td>
+      <td>-777</td>
+      <td>39535.621690</td>
+      <td>2008-03-28</td>
+      <td>14:55:14</td>
+      <td>2008-03-28 14:55:14</td>
+      <td>10</td>
+      <td>1.0</td>
+      <td>train</td>
+      <td>2023-06-11 14:55:14</td>
+      <td>0 days 00:00:34</td>
+      <td>34.0</td>
+      <td>39.894178</td>
+      <td>116.3182</td>
+      <td>0.252764</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="id4">
@@ -804,18 +984,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span> <span class="o">=</span> \
-<span class="ne">----&gt; </span><span class="mi">2</span>             <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(((</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span><span class="o">&amp;</span><span class="p">(</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)),</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">/</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                      <span class="p">(</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,16 +993,76 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Let&#39;s check the descriptions of speed per transportation mode</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">speed</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;std&#39;</span><span class="p">])</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean</th>
+      <th>min</th>
+      <th>max</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>trans_mode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bus</th>
+      <td>40.731893</td>
+      <td>0.0</td>
+      <td>219.970336</td>
+      <td>29.834764</td>
+    </tr>
+    <tr>
+      <th>subway</th>
+      <td>52.369217</td>
+      <td>0.0</td>
+      <td>217.578404</td>
+      <td>25.219674</td>
+    </tr>
+    <tr>
+      <th>taxi</th>
+      <td>30.355116</td>
+      <td>0.0</td>
+      <td>156.129306</td>
+      <td>27.505678</td>
+    </tr>
+    <tr>
+      <th>train</th>
+      <td>87.305798</td>
+      <td>0.0</td>
+      <td>76412.488301</td>
+      <td>129.458882</td>
+    </tr>
+    <tr>
+      <th>walk</th>
+      <td>5.453786</td>
+      <td>0.0</td>
+      <td>77.700333</td>
+      <td>3.290184</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="id5">
@@ -845,17 +1073,6 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># store previous points&#39; speed</span>
 <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;speed_prev&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">)[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># store previous points&#39; speed</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;speed_prev&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">)[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -880,17 +1097,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># map the above calculation fuction to the dataframe</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;accel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_accel</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;speed_prev&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -900,16 +1106,104 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># check basic statistics of acceleration per transportation mode</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">)[</span><span class="s1">&#39;accel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>trans_mode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bus</th>
+      <td>35156.0</td>
+      <td>-0.072119</td>
+      <td>5.457844</td>
+      <td>-166.371582</td>
+      <td>-1.161253</td>
+      <td>-3.753887e-06</td>
+      <td>1.108991</td>
+      <td>178.138813</td>
+    </tr>
+    <tr>
+      <th>subway</th>
+      <td>20338.0</td>
+      <td>-0.091452</td>
+      <td>6.851066</td>
+      <td>-136.151441</td>
+      <td>-1.233928</td>
+      <td>2.384665e-01</td>
+      <td>1.791577</td>
+      <td>126.904634</td>
+    </tr>
+    <tr>
+      <th>taxi</th>
+      <td>56731.0</td>
+      <td>-0.061755</td>
+      <td>4.192712</td>
+      <td>-97.929174</td>
+      <td>-1.272490</td>
+      <td>0.000000e+00</td>
+      <td>1.300822</td>
+      <td>96.055705</td>
+    </tr>
+    <tr>
+      <th>train</th>
+      <td>380835.0</td>
+      <td>-0.007112</td>
+      <td>4.349676</td>
+      <td>-1122.655229</td>
+      <td>-0.973044</td>
+      <td>4.474713e-09</td>
+      <td>0.987760</td>
+      <td>1293.744609</td>
+    </tr>
+    <tr>
+      <th>walk</th>
+      <td>36954.0</td>
+      <td>-0.051443</td>
+      <td>3.310213</td>
+      <td>-64.769768</td>
+      <td>-1.191070</td>
+      <td>2.163060e-03</td>
+      <td>1.201445</td>
+      <td>59.242515</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="angular-velocity">
@@ -939,17 +1233,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># apply the calculation function abvoe to the dataframe</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_angle</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;latitude_prev&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;longitude_prev&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -959,16 +1242,104 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># print out the description of angle differences between two points per transportation mode</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">])[</span><span class="s1">&#39;angle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>trans_mode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bus</th>
+      <td>35156.0</td>
+      <td>159.299021</td>
+      <td>111.391769</td>
+      <td>-0.0</td>
+      <td>68.399355</td>
+      <td>172.127466</td>
+      <td>255.799236</td>
+      <td>359.999455</td>
+    </tr>
+    <tr>
+      <th>subway</th>
+      <td>20338.0</td>
+      <td>137.644859</td>
+      <td>104.230577</td>
+      <td>0.0</td>
+      <td>19.438924</td>
+      <td>173.706695</td>
+      <td>196.554703</td>
+      <td>359.827198</td>
+    </tr>
+    <tr>
+      <th>taxi</th>
+      <td>56731.0</td>
+      <td>158.724686</td>
+      <td>116.988570</td>
+      <td>-0.0</td>
+      <td>29.485250</td>
+      <td>178.534543</td>
+      <td>226.851081</td>
+      <td>359.929870</td>
+    </tr>
+    <tr>
+      <th>train</th>
+      <td>380835.0</td>
+      <td>179.733586</td>
+      <td>103.023225</td>
+      <td>0.0</td>
+      <td>98.886739</td>
+      <td>179.800484</td>
+      <td>269.325408</td>
+      <td>359.999506</td>
+    </tr>
+    <tr>
+      <th>walk</th>
+      <td>36954.0</td>
+      <td>181.486218</td>
+      <td>104.497955</td>
+      <td>0.0</td>
+      <td>97.345459</td>
+      <td>181.463673</td>
+      <td>269.999640</td>
+      <td>359.812308</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Angular velocityを求めます。</p>
 <div class="cell docutils container">
@@ -995,15 +1366,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># create a new column holding the previous points&#39; angle difference</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;angle_prev&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;trans_trip&#39;</span><span class="p">)[</span><span class="s1">&#39;angle&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># apply the calculation function to the dataframe</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;angular_velocity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">calc_angular_velocity</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;angle_prev&#39;</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    529586.000000
+mean         10.510742
+std          45.292572
+min           0.000000
+25%           0.272122
+50%           0.870065
+75%           2.537062
+max         359.997255
+Name: angular_velocity, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1044,20 +1415,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">markers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># iterate over transportation modes</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">mode</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># create sub-dataframe holding the rows with the mode</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">chunk</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">mode</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="c1"># create mean scores of speed and angular_velocity per trip</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/974e5a7ca1902b31ec41cb73735625e3d39304e7901af6949a365a9986d2e41c.png" src="../../_images/974e5a7ca1902b31ec41cb73735625e3d39304e7901af6949a365a9986d2e41c.png" />
+<img alt="../../_images/259e50520d1ff922241444d5c12199354d49e2f8e654140a5802bca0a3c27af1.png" src="../../_images/259e50520d1ff922241444d5c12199354d49e2f8e654140a5802bca0a3c27af1.png" />
 </div>
 </div>
 <!-- #### Plot box plots of acceleration scores per trip per transportation mode -->
@@ -1084,24 +1442,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">markers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">accel_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trans_mode&#39;</span><span class="p">,</span> <span class="s1">&#39;trans_trip&#39;</span><span class="p">])[[</span><span class="s1">&#39;accel&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">accel_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;trans_mode&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;accel&quot;</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="c1"># showfliers=True, </span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="n">notch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">showcaps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>             <span class="n">medianprops</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;coral&quot;</span><span class="p">},</span> 
-<span class="g g-Whitespace">     </span><span class="mi">12</span>             <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;transportation mode&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/974e5a7ca1902b31ec41cb73735625e3d39304e7901af6949a365a9986d2e41c.png" src="../../_images/974e5a7ca1902b31ec41cb73735625e3d39304e7901af6949a365a9986d2e41c.png" />
+<img alt="../../_images/6e948ad14dc3a10ff7a39a7987a9a38e51a6151bb5a0d4251ebae48bfb2a7c5d.png" src="../../_images/6e948ad14dc3a10ff7a39a7987a9a38e51a6151bb5a0d4251ebae48bfb2a7c5d.png" />
 </div>
 </div>
 </section>
@@ -1117,37 +1458,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># drop the rows without dt_seconds values</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">traj_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># drop the rows which has 0 seconds gaps from previous points</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">traj_df</span> <span class="o">=</span> <span class="n">traj_df</span><span class="p">[</span><span class="o">~</span><span class="p">(</span><span class="n">traj_df</span><span class="p">[</span><span class="s1">&#39;dt_seconds&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PLEASE REPLACE THE BELOW PATH WITH YOUR PATH</span>
 <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;traj_</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">_labeled_with_features.csv&#39;</span>
 <span class="n">traj_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># PLEASE REPLACE THE BELOW PATH WITH YOUR PATH</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;traj_</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">_labeled_with_features.csv&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">traj_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;traj_df&#39; is not defined
 </pre></div>
 </div>
 </div>

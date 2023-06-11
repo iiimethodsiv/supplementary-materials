@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -49,6 +50,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -72,7 +74,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/sec06/logit_provit';</script>
-    <link rel="canonical" href="https://github.com/iiimethodsiv/intro2quandataanalysis/docs/sec06/logit_provit.html" />
+    <link rel="canonical" href="https://github.com/iiimethodsiv/supplementary-materials/docs/sec06/logit_provit.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -297,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/iiimethodsiv/intro2quandataanalysis/blob/gh-pages/docs/sec06/logit_provit.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/iiimethodsiv/supplementary-materials/blob/gh-pages/docs/sec06/logit_provit.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +330,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/iiimethodsiv/intro2quandataanalysis" target="_blank"
+      <li><a href="https://github.com/iiimethodsiv/supplementary-materials" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +347,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/iiimethodsiv/intro2quandataanalysis/issues/new?title=Issue%20on%20page%20%2Fdocs/sec06/logit_provit.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/iiimethodsiv/supplementary-materials/issues/new?title=Issue%20on%20page%20%2Fdocs/sec06/logit_provit.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -948,7 +950,7 @@ Model Family:                Binomial   Df Model:                           15
 Link Function:                  Logit   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -1278.6
 Date:                Sun, 11 Jun 2023   Deviance:                       2557.2
-Time:                        06:10:43   Pearson chi2:                 5.97e+03
+Time:                        17:32:13   Pearson chi2:                 5.97e+03
 No. Iterations:                     6   Pseudo R-squ. (CS):             0.1385
 Covariance Type:            nonrobust                                         
 ===========================================================================================
@@ -994,7 +996,9 @@ pdays                       0.0029      0.000      6.631      0.000       0.002 
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
          Current function value: 0.282812
          Iterations 7
-        Logit Marginal Effects       
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Logit Marginal Effects       
 =====================================
 Dep. Variable:                      y
 Method:                          dydx
@@ -1101,7 +1105,7 @@ Dep. Variable:                      y   No. Observations:                 4521
 Model:                         Probit   Df Residuals:                     4505
 Method:                           MLE   Df Model:                           15
 Date:                Sun, 11 Jun 2023   Pseudo R-squ.:                  0.2136
-Time:                        06:10:44   Log-Likelihood:                -1270.4
+Time:                        17:32:19   Log-Likelihood:                -1270.4
 converged:                       True   LL-Null:                       -1615.5
 Covariance Type:            nonrobust   LLR p-value:                2.300e-137
 ===========================================================================================
